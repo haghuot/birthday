@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#ff4d7d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>点蜡烛许愿</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./candle.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <main class="candle-wrap">
+      <header class="candle-header">
+        <button class="back-btn" id="btnBack" type="button" aria-label="返回">← 返回</button>
+      </header>
+
+      <section class="candle-section">
+        <h1 class="candle-title" id="candleTitle">许个愿吧</h1>
+        <p class="candle-subtitle" id="candleSubtitle">闭上眼睛，在心里默默许下你的愿望</p>
+
+        <div class="candles-container" id="candlesContainer">
+          <!-- 蜡烛将通过 JavaScript 动态生成 -->
+        </div>
+
+        <div class="wish-hint" id="wishHint">
+          <p>💭 在心里默念你的愿望...</p>
+        </div>
+
+        <div class="blow-hint" id="blowHint" style="display: none;">
+          <p>💨 点击蜡烛或点击下方按钮吹灭蜡烛</p>
+          <button class="blow-btn" id="btnBlow" type="button">吹灭所有蜡烛</button>
+        </div>
+
+        <div class="wish-result" id="wishResult" style="display: none;">
+          <div class="sparkles">✨✨✨</div>
+          <h2>愿望已许下</h2>
+          <p>你的愿望一定会实现的！</p>
+          <button class="back-btn primary" id="btnNext" type="button">返回首页</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./candle.js"></script>
+  </body>
+</html>
